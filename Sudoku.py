@@ -1,8 +1,14 @@
-#board_rows = int(input().strip())
-#board_columns = int(input().strip())
+# board_rows = int(input().strip())
+# board_columns = int(input().strip())
 
-#for _ in range(board_rows):
+# for _ in range(board_rows):
 #    board.append(list(map(int, input().rstrip().split())))
+
+# board_rows = int(input().strip())
+# board_columns = int(input().strip())
+
+# for _ in range(board_rows):
+#  board.append(list(map(int, input().rstrip().split())))
 
 board = [
     ['5', '3', '.', '.', '7', '.', '1', '.', '.'],
@@ -15,11 +21,11 @@ board = [
     ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
     ['.', '.', '.', '.', '8', '.', '7', '.', '9']
 ]
-def ValidSudoku(board):
-    rows = [board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]]
-    count = 0
 
+
+def ValidSudoku(board):
     for a in range(len(board)):
+
         ones = board[a].count('1')
         if ones > 1:
             return False
@@ -50,41 +56,36 @@ def ValidSudoku(board):
 
     for b in range(len(board)):
 
-        ones = board[a].count('1')
+        ones = board[0][b].count('1')
         if ones > 1:
             return False
-        twos = board[a].count('2')
+        twos = board[1][b].count('2')
         if twos > 1:
             return False
-        threes = board[a].count('3')
+        threes = board[2][b].count('3')
         if threes > 1:
             return False
-        fours = board[a].count('4')
+        fours = board[3][b].count('4')
         if fours > 1:
             return False
-        fives = board[a].count('5')
+        fives = board[4][b].count('5')
         if fives > 1:
             return False
-        sixes = board[a].count('6')
+        sixes = board[5][b].count('6')
         if sixes > 1:
             return False
-        sevens = board[a].count('7')
+        sevens = board[6][b].count('7')
         if sevens > 1:
             return False
-        eights = board[a].count('8')
+        eights = board[7][b].count('8')
         if eights > 1:
             return False
-        nines = board[a].count('9')
+        nines = board[8][b].count('9')
         if nines > 1:
             return False
 
-#count for the columns
-
-    board[row][column]
-
-    num = 0
+        return True
 
 
+print(ValidSudoku(board))
 
-# go to the first index in columns
-# go to the first index and count through 1-9
