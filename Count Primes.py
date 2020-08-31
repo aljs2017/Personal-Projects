@@ -27,4 +27,4 @@ def isPrime(current_number, prime_count):
     return True
 
 
-countPrimes(input_number, prime_count)
+print(countPrimes(input_number, prime_count))
